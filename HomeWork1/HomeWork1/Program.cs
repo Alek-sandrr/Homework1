@@ -96,6 +96,26 @@ namespace HomeWork1
            LOG Введите два числа:5
             2
             произведение всех чётных целых чисел от A до B=8*/
+
+
+        // Дано целое число K и набор ненулевых целых чисел; признак его завершения — число 0.
+        // Вычислить количество чисел в наборе, меньших K, а также количество чисел, делящихся на K нацело
+        static (int, int) lessK(List<int> l, int k)
+        {
+            int c1 = 0;
+            int c2 = 0;
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (l[i] < k)
+                    c1 += 1;
+                if ((l[i] % k) == 0)
+                    c2 += 1;
+            }
+            return (c1 - 1, c2 - 1);//чтобы не посчитать ноль вычтем 1
+        }
+        //LOG Введите числo:5
+        //Введите набор ненулевых целых чисел:10 3 2 1 0
+        //количество чисел, меньших K; делящихся на K нацело:(3, 1)
         static void Main(string[] args)
         {
             //Console.Write("Введите число:");
@@ -124,6 +144,18 @@ namespace HomeWork1
         int x3 = Convert.ToInt16(Console.ReadLine());
         int y3 = Convert.ToInt16(Console.ReadLine());
         Console.WriteLine($"произведение всех чётных целых чисел от A до B={ chetnprod(x3, y3)}");*/
+
+        /*Console.Write("Введите числo:");
+        int k = Convert.ToInt16(Console.ReadLine());
+        Console.Write("Введите набор ненулевых целых чисел:");
+        List<int> l= new List<int>();
+        int c = 1;
+        while (c != 0) 
+        {
+            c = Convert.ToInt16(Console.ReadLine());
+            l.Add(c);
+        }
+        Console.WriteLine($"количество чисел, меньших K; делящихся на K нацело:{lessK(l,k)}");*/
         }
     }
 }
