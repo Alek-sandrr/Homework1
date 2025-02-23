@@ -116,6 +116,43 @@ namespace HomeWork1
         //LOG Введите числo:5
         //Введите набор ненулевых целых чисел:10 3 2 1 0
         //количество чисел, меньших K; делящихся на K нацело:(3, 1)
+
+        
+        //Описать перечислимый тип Seasons (времена года). Создать метод, который по номеру месяца [1..12] возвращает время года.
+        enum Season { Winter, Spring, Summer, Autumn }
+        static Season GetSeason(int a)
+        {
+            if (a > 12 | a < 1)
+                throw new ArgumentException("неверный номер месяца!");
+            switch (a)
+            {
+                case 1:
+                case 2:
+                case 12:
+                    return Season.Winter;
+                case 3:
+                case 4:
+                case 5:
+                    return Season.Spring;
+                case 6:
+                case 7:
+                case 8:
+                    return Season.Summer;
+                case 9:
+                case 10:
+                case 11:
+                    return Season.Autumn;
+            }
+            return 0;
+        }
+        /*LOG
+         Введите числo(1-12):9
+         Season: Autumn
+         Введите числo(1-12):2
+         Season: Winter
+         Введите числo(1-12):30
+         неверный номер месяца!
+         */
         static void Main(string[] args)
         {
             //Console.Write("Введите число:");
@@ -145,17 +182,24 @@ namespace HomeWork1
         int y3 = Convert.ToInt16(Console.ReadLine());
         Console.WriteLine($"произведение всех чётных целых чисел от A до B={ chetnprod(x3, y3)}");*/
 
-        /*Console.Write("Введите числo:");
-        int k = Convert.ToInt16(Console.ReadLine());
-        Console.Write("Введите набор ненулевых целых чисел:");
-        List<int> l= new List<int>();
-        int c = 1;
-        while (c != 0) 
-        {
-            c = Convert.ToInt16(Console.ReadLine());
-            l.Add(c);
-        }
-        Console.WriteLine($"количество чисел, меньших K; делящихся на K нацело:{lessK(l,k)}");*/
+            /*Console.Write("Введите числo:");
+            int k = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Введите набор ненулевых целых чисел:");
+            List<int> l= new List<int>();
+            int c = 1;
+            while (c != 0) 
+            {
+                c = Convert.ToInt16(Console.ReadLine());
+                l.Add(c);
+            }
+            Console.WriteLine($"количество чисел, меньших K; делящихся на K нацело:{lessK(l,k)}");*/
+
+
+            /*Console.Write("Введите числo(1-12):");
+            int s = Convert.ToInt16(Console.ReadLine());
+            try { GetSeason(s); }
+            catch (ArgumentException e) { Console.WriteLine(e.Message); }
+            Console.WriteLine($"Season: {GetSeason(s)}");*/
         }
     }
 }
