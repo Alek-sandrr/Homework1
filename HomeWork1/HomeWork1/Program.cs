@@ -62,6 +62,20 @@ namespace HomeWork1
         //3
         //-4
         //Количество корней = 2
+
+
+        //Создать функцию, которая возвращает минимум из двух переданных вещественных чисел. 
+        static double min(double x, double y)
+        {
+            if (x > y)
+                return (y);
+            else
+                return (x);
+        }
+        //LOG
+        //Введите два вещественных числа:15
+        //9
+        //Минимум=9
         static void Main(string[] args)
         {
             //Console.Write("Введите число:");
@@ -75,11 +89,16 @@ namespace HomeWork1
             catch (ArgumentException e) { Console.WriteLine(e.Message); }*/
 
 
-        /*Console.WriteLine("Введите A,B,C(A!=0):");
-        double a = Convert.ToDouble(Console.ReadLine());
-        double b = Convert.ToDouble(Console.ReadLine());
-        double c = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine($"Количество корней={korennum(a,b,c)}");*/
+            /*Console.WriteLine("Введите A,B,C(A!=0):");
+            double a = Convert.ToDouble(Console.ReadLine());
+            double b = Convert.ToDouble(Console.ReadLine());
+            double c = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"Количество корней={korennum(a,b,c)}");*/
+
+            /*Console.Write("Введите два вещественных числа:");
+            double x2 = Convert.ToDouble(Console.ReadLine());
+            double y2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write($"Минимум={min(x2,y2)}");*/
         }
     }
 }
