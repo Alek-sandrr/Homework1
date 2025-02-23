@@ -76,6 +76,26 @@ namespace HomeWork1
         //Введите два вещественных числа:15
         //9
         //Минимум=9
+
+
+        //5.Даны целые числа A и B. Найти произведение всех чётных целых чисел от A до B включительно.
+        static double chetnprod(int a, int b)
+        {
+            double c = 1;
+            if (b < a)
+                (a, b) = (b, a);
+            for (int i = a; i < b; i++)
+            {
+                if (i % 2 == 0)
+                    c *= i;
+            }
+            return c;
+        }/*LOG Введите два числа:2 
+            5
+            произведение всех чётных целых чисел от A до B=8
+           LOG Введите два числа:5
+            2
+            произведение всех чётных целых чисел от A до B=8*/
         static void Main(string[] args)
         {
             //Console.Write("Введите число:");
@@ -99,6 +119,11 @@ namespace HomeWork1
             double x2 = Convert.ToDouble(Console.ReadLine());
             double y2 = Convert.ToDouble(Console.ReadLine());
             Console.Write($"Минимум={min(x2,y2)}");*/
+
+            /*Console.Write("Введите два числа:");
+        int x3 = Convert.ToInt16(Console.ReadLine());
+        int y3 = Convert.ToInt16(Console.ReadLine());
+        Console.WriteLine($"произведение всех чётных целых чисел от A до B={ chetnprod(x3, y3)}");*/
         }
     }
 }
