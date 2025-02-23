@@ -43,6 +43,25 @@ namespace HomeWork1
         //9
         //9
         //координаты должны быть: 1-8
+
+
+        //Даны числа A, B, C Вернуть количество вещественных корней квадратного уравнения
+        static int korennum(double a, double b, double c)
+        {
+            double disc = Math.Pow(b, 2) - 4 * a * c;
+            if (disc > 0)
+                return (2);
+            if (disc == 0)
+                return (1);
+            else
+                return (0);
+        }
+        //LOG
+        //Введите A,B,C(A!=0):
+        //1
+        //3
+        //-4
+        //Количество корней = 2
         static void Main(string[] args)
         {
             //Console.Write("Введите число:");
@@ -54,6 +73,13 @@ namespace HomeWork1
             int y1 = Convert.ToInt32(Console.ReadLine());          
             try { BlackOrWhite(x1, y1); }
             catch (ArgumentException e) { Console.WriteLine(e.Message); }*/
+
+
+        /*Console.WriteLine("Введите A,B,C(A!=0):");
+        double a = Convert.ToDouble(Console.ReadLine());
+        double b = Convert.ToDouble(Console.ReadLine());
+        double c = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine($"Количество корней={korennum(a,b,c)}");*/
         }
     }
 }
