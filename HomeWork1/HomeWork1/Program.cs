@@ -153,6 +153,19 @@ namespace HomeWork1
          Введите числo(1-12):30
          неверный номер месяца!
          */
+
+
+        // Описать метод, выводящий на консоль N строк "Месяц №<номер месяца>,
+        // его сезон: <сезон для этого месяца>". Номера месяцев генерируются случайно.
+        static void RandomSeasons(int n)
+        {
+            Random r = new Random();
+            for (int i = 0; i < n; i++)
+            {
+                int x = r.Next(1, 13);
+                Console.WriteLine($"Месяц {x},его сезон: {GetSeason(x)}");
+            }
+        }
         static void Main(string[] args)
         {
             //Console.Write("Введите число:");
@@ -200,6 +213,10 @@ namespace HomeWork1
             try { GetSeason(s); }
             catch (ArgumentException e) { Console.WriteLine(e.Message); }
             Console.WriteLine($"Season: {GetSeason(s)}");*/
+
+            Console.Write("Введите числo:");
+            int m = Convert.ToInt16(Console.ReadLine());
+            RandomSeasons(m);
         }
     }
 }
